@@ -8,7 +8,7 @@ This project is designed to classify sentiment and detect intent in medical conv
 We use the following models for classification:
 - **Sentiment Analysis:** `distilbert-base-uncased`
 - **Intent Classification:** `bert-base-uncased`
-![Sentiment Analysis](https://github.com/Shrey152002/Task1emitrr/blob/main/Screenshot%202025-03-17%20124022.png)
+![Sentiment Analysis](https://github.com/Shrey152002/Task2emitrr/blob/main/Screenshot%20(11).png)
 Initially, we attempted fine-tuning on the **Reddit Mental Health Dataset**, but due to certain challenges, this approach was not applied in the final implementation.
 ## Output
 ![Sentiment Analysis](https://github.com/Shrey152002/Task2emitrr/blob/main/Screenshot%20(12).png)
