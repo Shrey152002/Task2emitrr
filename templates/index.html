@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Sentiment Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Medical Sentiment Analyzer</h1>
+            <p>Analyze patient sentiment and intent from medical conversations</p>
+        </header>
+        
+        <main>
+            <div class="input-section">
+                <h2>Enter Medical Transcript</h2>
+                <p class="instructions">Enter a medical conversation transcript. Lines starting with "Patient:" will be analyzed.</p>
+                <textarea id="transcript" placeholder="Example:
+Physician: Good morning, how are you feeling today?
+Patient: I'm still having some back pain, but it's a bit better than last week.
+Physician: That's good to hear. Can you describe the pain?
+Patient: It's a dull ache most of the time, but sometimes it gets sharp when I move."></textarea>
+                <button id="analyze-btn">Analyze Transcript</button>
+            </div>
+            
+            <div class="results-section" id="results-container">
+                <h2>Analysis Results</h2>
+                <div id="loading" class="hidden">Analyzing...</div>
+                
+                <div id="results" class="hidden">
+                    <div class="overall-results">
+                        <h3>Overall Patient Analysis</h3>
+                        <div class="result-cards">
+                            <div class="card sentiment">
+                                <h4>Sentiment</h4>
+                                <p id="overall-sentiment"></p>
+                            </div>
+                            <div class="card intent">
+                                <h4>Intent</h4>
+                                <p id="overall-intent"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="utterance-results">
+                        <h3>Utterance Analysis</h3>
+                        <div id="utterances"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Medical Sentiment Analyzer &copy; 2025</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
